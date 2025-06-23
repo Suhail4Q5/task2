@@ -1,0 +1,19 @@
+#define RELAY_PIN 4
+char data = 0;
+
+void setup() {
+  pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, HIGH); // Relay off
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available()) {
+    data = Serial.read();
+    if (data == '1') {
+      digitalWrite(RELAY_PIN, LOW); // Relay on
+    } else if (data == '0') {
+      digitalWrite(RELAY_PIN, HIGH); // Relay off
+    }
+  }
+}
