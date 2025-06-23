@@ -113,4 +113,5 @@ Expandable: Can integrate sensors like PIR, LDR, or voice control.
 projecthub.arduino.cc
 +1
 **THANK YOU!**
+CIRCUIT:   ![Image](https://github.com/user-attachments/assets/9697b103-e645-438b-a405-98c9faf02225)
 
