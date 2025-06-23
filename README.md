@@ -112,5 +112,5 @@ makersportal.com
 Expandable: Can integrate sensors like PIR, LDR, or voice control. 
 projecthub.arduino.cc
 +1
-**THAMK YOU!**
+**THANK YOU!**
 
