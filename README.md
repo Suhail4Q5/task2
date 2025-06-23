@@ -115,3 +115,24 @@ projecthub.arduino.cc
 **THANK YOU!**
 CIRCUIT:   ![Image](https://github.com/user-attachments/assets/9697b103-e645-438b-a405-98c9faf02225)
 
+*OUTPUT*:
+When the Arduino receives a character over Bluetooth (via the HC‑05):
+
+If it gets '1', it sets RELAY_PIN (digital pin 4) LOW, which activates the relay, allowing power through and turning the connected appliance ON.
+
+If it gets '0', it sets RELAY_PIN HIGH, which deactivates the relay, cutting power and turning the appliance OFF.
+
+There’s no text output printed to your Serial Monitor—only the relay’s electrical state changes. If you want debug feedback over USB, you could add code like this:
+
+cpp
+Copy
+Edit
+if (data == '1') {
+  digitalWrite(RELAY_PIN, LOW); // Relay on
+  Serial.println("Relay ON");
+} else if (data == '0') {
+  digitalWrite(RELAY_PIN, HIGH); // Relay off
+  Serial.println("Relay OFF");
+}
+This way, each button press from your phone would result in an “Relay ON” or “Relay OFF” message
+
